@@ -1,0 +1,12 @@
+services:
+  latex:
+    image: texlive/texlive
+    working_dir: /work
+    volumes:
+      - .:/work
+    command: >
+      latexmk
+      -pdf
+      -interaction=nonstopmode
+      -halt-on-error
+      main.tex

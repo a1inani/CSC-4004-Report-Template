@@ -1,0 +1,490 @@
+\documentclass[12pt,a4paper]{report}
+
+% ============================================================
+% University of Zambia - Department of Computing and Informatics
+% Final Year Project Report Template - Academic Year 2026
+% ============================================================
+
+\usepackage[a4paper,margin=1in,left=1.25in]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+\onehalfspacing
+\setlength{\parindent}{0.5in}
+\setlength{\parskip}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Final Year Project Report}
+\fancyhead[R]{2026}
+\fancyfoot[C]{\thepage}
+
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\centering}
+  {\chaptername\ \thechapter}
+  {0.5em}
+  {\Large}
+
+\begin{document}
+
+% ============================================================
+% FRONT MATTER
+% ============================================================
+
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+
+{\Large\bfseries THE UNIVERSITY OF ZAMBIA\par}
+\vspace{0.4cm}
+{\large\bfseries SCHOOL OF NATURAL AND APPLIED SCIENCES\par}
+\vspace{0.4cm}
+{\large\bfseries DEPARTMENT OF COMPUTING AND INFORMATICS\par}
+
+\vfill
+
+{\Large\bfseries FINAL YEAR PROJECT REPORT\par}
+\vspace{0.5cm}
+{\large\bfseries ACADEMIC YEAR 2026\par}
+
+\vfill
+
+{\LARGE\bfseries [PROJECT TITLE]\par}
+
+\vfill
+
+A Final Year Project Report Submitted to the\\
+Department of Computing and Informatics\\
+in partial fulfilment of the requirements for the award of\\[0.2cm]
+{\bfseries [DEGREE PROGRAMME]}
+
+\vfill
+
+{\bfseries Student Name:} [STUDENT NAME]\\
+{\bfseries Computer Number:} [COMPUTER NUMBER]\\[0.3cm]
+{\bfseries Supervisor:} [SUPERVISOR NAME]\\
+{\bfseries Date of Submission:} [DATE]
+
+\vfill
+\end{titlepage}
+
+% Declaration
+\chapter*{DECLARATION}
+\addcontentsline{toc}{chapter}{Declaration}
+
+I declare that this final year project report is my own work and has been prepared in accordance with the academic requirements of the University of Zambia. All sources of information, ideas, data, software, images, and other material that are not my own have been appropriately acknowledged and referenced.
+
+Where this project was undertaken as part of a group, I have clearly identified my individual contributions and have not presented the work of other group members as my own.
+
+\vspace{1cm}
+\noindent\textbf{Student Name:} \hrulefill
+
+\vspace{0.5cm}
+\noindent\textbf{Computer Number:} \hrulefill
+
+\vspace{0.5cm}
+\noindent\textbf{Signature:} \hrulefill
+
+\vspace{0.5cm}
+\noindent\textbf{Date:} \hrulefill
+
+\clearpage
+
+% Approval
+\chapter*{APPROVAL}
+\addcontentsline{toc}{chapter}{Approval}
+
+This final year project report has been submitted for examination with the approval of the project supervisor.
+
+\vspace{1cm}
+\noindent\textbf{Supervisor Name:} \hrulefill
+
+\vspace{0.5cm}
+\noindent\textbf{Signature:} \hrulefill
+
+\vspace{0.5cm}
+\noindent\textbf{Date:} \hrulefill
+
+\vspace{1cm}
+\noindent\textbf{Departmental/Examiner Approval (if applicable):} \hrulefill
+
+\clearpage
+
+% Abstract
+\chapter*{ABSTRACT}
+\addcontentsline{toc}{chapter}{Abstract}
+
+% GUIDANCE: Normally 200--300 words. Summarise the problem, aim,
+% methodology, major results/findings, and conclusion.
+[Write the abstract here.]
+
+\noindent\textbf{Keywords:} [keyword 1]; [keyword 2]; [keyword 3]; [keyword 4]; [keyword 5]
+
+\clearpage
+
+% Acknowledgements
+\chapter*{ACKNOWLEDGEMENTS}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+
+% GUIDANCE: Acknowledge academic, technical, institutional, financial,
+% and other appropriate support.
+[Write acknowledgements here.]
+
+\clearpage
+
+% Contents and lists
+\tableofcontents
+\clearpage
+
+\listoffigures
+\clearpage
+
+\listoftables
+\clearpage
+
+\chapter*{LIST OF ABBREVIATIONS AND ACRONYMS}
+\addcontentsline{toc}{chapter}{List of Abbreviations and Acronyms}
+
+\begin{longtable}{p{0.25\textwidth}p{0.65\textwidth}}
+\textbf{Abbreviation} & \textbf{Meaning}\\
+API & [Application Programming Interface]\\
+DBMS & [Database Management System]\\
+ML & [Machine Learning]\\
+UI & [User Interface]\\
+\end{longtable}
+
+\clearpage
+
+% ============================================================
+% GROUP PROJECT GUIDANCE
+% ============================================================
+
+\chapter*{NOTE ON GROUP PROJECTS}
+\addcontentsline{toc}{chapter}{Note on Group Projects}
+
+Students who worked on a project as a group are strongly encouraged to prepare their own individual final reports rather than submitting identical reports. The project, system, dataset, or overall research problem may be shared, but each student's report should clearly demonstrate that student's own understanding, responsibilities, work, results, and contribution to the project.
+
+In particular, group-project students should:
+
+\begin{itemize}
+    \item state the overall group project and explain how the individual work fits within it;
+    \item clearly identify their own responsibilities and deliverables;
+    \item focus detailed analysis, design, implementation, experiments, testing, and/or evaluation on their own contribution;
+    \item acknowledge the work completed by other group members where it is discussed;
+    \item include an \emph{Individual Contribution Statement} in the appendices; and
+    \item not claim another group member's work, results, code, data collection, or design decisions as their own.
+\end{itemize}
+
+\clearpage
+
+% ============================================================
+% MAIN REPORT
+% ============================================================
+
+\chapter{Introduction}
+
+% GUIDANCE: This chapter should describe the completed project,
+% not merely what was proposed.
+
+\section{Background and Context}
+Introduce the project area, context, motivation, and relevant background. Explain why the topic matters.
+
+\section{Problem Statement}
+Clearly define the specific problem addressed. Establish its relevance and justify why it requires investigation or a solution.
+
+\section{Project Aim}
+State one overall goal of the project.
+
+\section{Project Objectives}
+List specific, measurable objectives. Use the objectives established in the proposal, updating them if the project scope legitimately changed.
+
+\begin{enumerate}
+    \item [Objective 1]
+    \item [Objective 2]
+    \item [Objective 3]
+    \item [Objective 4]
+\end{enumerate}
+
+\section{Research Questions (where applicable)}
+State the questions the research or investigation seeks to answer. Omit this section if it is not appropriate.
+
+\section{Scope of the Project}
+Define what is included and excluded.
+
+\subsection{In Scope}
+[Describe the elements included in the completed project.]
+
+\subsection{Out of Scope}
+[Describe important exclusions.]
+
+\section{Significance of the Project}
+Explain who benefits from the project and its practical, technical, research, or institutional significance.
+
+\section{Limitations}
+Discuss important constraints that affected the project, such as data, time, resources, access, or technical limitations.
+
+\section{Organisation of the Report}
+Briefly describe the contents of each subsequent chapter.
+
+\chapter{Literature Review}
+
+\section{Introduction}
+Introduce the purpose and structure of the literature review.
+
+\section{Key Concepts and Theories}
+Explain concepts, models, theories, frameworks, or technical foundations needed to understand the project.
+
+\section{Existing Systems / Related Work}
+Review relevant existing systems, studies, approaches, algorithms, technologies, or solutions.
+
+\section{Comparative Analysis}
+Compare relevant approaches or existing solutions using appropriate criteria.
+
+\section{Research / Knowledge Gap}
+Identify what is missing, inadequate, unresolved, or improvable in existing work.
+
+\section{Conceptual or Theoretical Framework (where applicable)}
+Present and explain the framework guiding the project.
+
+\section{Chapter Summary}
+Summarise the major conclusions from the literature and connect them to the project.
+
+\chapter{Methodology}
+
+\section{Introduction}
+Explain the methodology used to conduct the completed project.
+
+\section{Research / Development Approach}
+Describe and justify the approach used, such as Agile, Waterfall, experimental research, design science, or another appropriate method.
+
+\section{Requirements / Data Collection}
+Describe how requirements, data, participants, observations, or other inputs were obtained, where applicable.
+
+\section{System Architecture / Research Workflow}
+Present and explain the overall architecture, workflow, experimental pipeline, or research process.
+
+\section{Tools and Technologies}
+Document programming languages, frameworks/libraries, databases, hardware, platforms, development environments, and other major tools.
+
+\section{Ethical and Legal Considerations}
+Address data privacy, user consent, security, intellectual property, licensing, responsible use of data/software, and other relevant considerations.
+
+\section{Evaluation Method}
+Explain how success was measured, including test criteria, performance metrics, user evaluation, experimental design, or other evaluation procedures.
+
+\section{Chapter Summary}
+Summarise the methodology.
+
+\chapter{System Analysis and Design}
+
+\section{Introduction}
+Introduce the analysis and design activities.
+
+\section{Stakeholder and User Analysis}
+Identify relevant stakeholders and user groups.
+
+\section{Functional Requirements}
+Document what the system or solution must do.
+
+\section{Non-Functional Requirements}
+Document requirements such as performance, usability, security, reliability, maintainability, and scalability.
+
+\section{Use Cases / User Stories}
+Present appropriate use cases, user stories, or equivalent specifications.
+
+\section{System / Solution Architecture}
+Present the final architecture and explain its components and interactions.
+
+\section{Database / Data Design (where applicable)}
+Include ER diagrams, schemas, data models, or other relevant designs.
+
+\section{Interface / Interaction Design (where applicable)}
+Present relevant wireframes, interface designs, interaction flows, or screen designs.
+
+\section{Algorithms / Models / Technical Design}
+Explain important algorithms, models, technical decisions, or design choices.
+
+\section{Chapter Summary}
+Summarise the final design.
+
+\chapter{Implementation / Development}
+
+\section{Introduction}
+Introduce the implementation.
+
+\section{Development Environment}
+Describe the hardware and software environment used.
+
+\section{System Components / Modules}
+Describe the major components implemented.
+
+\section{Key Implementation Details}
+Explain important implementation decisions, algorithms, integrations, data processing, or model development.
+
+\section{Integration}
+Explain how components, services, APIs, databases, hardware, or models were integrated.
+
+\section{Challenges and Solutions}
+Discuss significant implementation challenges and how they were addressed.
+
+\section{Individual Contribution (group projects)}
+Clearly identify the student's own implementation work and distinguish it from work completed by other group members.
+
+\section{Chapter Summary}
+Summarise the implementation.
+
+\chapter{Testing, Results and Evaluation}
+
+\section{Introduction}
+Explain the purpose of testing and evaluation.
+
+\section{Testing Strategy}
+Describe testing levels and techniques used, such as unit, integration, system, usability, security, or acceptance testing.
+
+\section{Test Cases and Results}
+Present representative test cases, expected outcomes, actual outcomes, and pass/fail status.
+
+\begin{table}[H]
+\centering
+\caption{Example test-case structure}
+\begin{tabular}{p{0.12\textwidth}p{0.27\textwidth}p{0.27\textwidth}p{0.15\textwidth}}
+\toprule
+ID & Test Case & Expected Result & Status\\
+\midrule
+TC-01 & [Description] & [Expected result] & [Pass/Fail]\\
+TC-02 & [Description] & [Expected result] & [Pass/Fail]\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Experimental Results / Performance Results (where applicable)}
+Present quantitative results, metrics, graphs, tables, or model evaluation.
+
+\section{User Evaluation (where applicable)}
+Present results from users, surveys, interviews, usability testing, or other evaluation.
+
+\section{Analysis of Results}
+Interpret the results rather than merely listing them.
+
+\section{Objective-by-Objective Evaluation}
+Explicitly show how the results demonstrate achievement of each project objective.
+
+\section{Individual Results (group projects)}
+Focus on results directly attributable to the student's contribution where the project was completed collaboratively.
+
+\section{Chapter Summary}
+Summarise the findings.
+
+\chapter{Discussion}
+
+\section{Introduction}
+Introduce the discussion.
+
+\section{Interpretation of Findings}
+Explain what the results mean in relation to the problem and objectives.
+
+\section{Comparison with Existing Work}
+Relate findings to the literature and existing solutions.
+
+\section{Contributions of the Project}
+Explain the project's practical, technical, research, or other contributions.
+
+\section{Limitations and Implications}
+Discuss limitations and their implications for interpreting the results.
+
+\section{Chapter Summary}
+Summarise the discussion.
+
+\chapter{Conclusion and Recommendations}
+
+\section{Introduction}
+Briefly introduce the conclusion.
+
+\section{Summary of the Project}
+Summarise the problem, approach, major work, and findings.
+
+\section{Conclusions}
+State the main conclusions supported by the project results.
+
+\section{Achievement of Objectives}
+State clearly whether and how each objective was achieved.
+
+\section{Recommendations}
+Provide practical recommendations arising from the project.
+
+\section{Future Work}
+Identify sensible extensions, improvements, or areas for further investigation.
+
+% ============================================================
+% REFERENCES
+% ============================================================
+
+\clearpage
+\chapter*{REFERENCES}
+\addcontentsline{toc}{chapter}{References}
+
+% Use one consistent referencing style throughout the report
+% (APA, IEEE, Harvard, or the style specified by the department).
+% Include only sources cited in the report.
+%
+% Recommended: use BibTeX/BibLaTeX for the final submission.
+
+[Insert references here.]
+e.g., 
+\begin{enumerate}
+    \item Chibuye, M., Phiri, J. (2025). Hybrid Prediction Model Using Elastic Net Regression and Echo State Networks for Enhanced Yield Prediction in Crop Systems: A Comparative Study of Dense Neural Networks and Hybrid Echo State Network Models. In: Proceedings of Tenth International Congress on Information and Communication Technology. ICICT 2025. Lecture Notes in Networks and Systems, vol 1412. Springer, Singapore. \url{https://doi.org/10.1007/978-981-96-6429-0_29}
+    \item Chibawe, G., Nyirenda, M. (2026). Enhancing Disease Outbreak Forecasting: Integrating Environmental Factors, Policy Interventions, and Machine Learning in Hybrid Epidemiological Models. In: ICT for Intelligent Systems. ICTIS 2025. Lecture Notes in Networks and Systems, vol 1511. Springer, Singapore. \url{https://doi.org/10.1007/978-981-96-8796-1_13}
+\end{enumerate}
+
+
+% ============================================================
+% APPENDICES
+% ============================================================
+
+\appendix
+
+\chapter{Individual Contribution Statement (Group Projects)}
+% Required for group projects.
+% Describe the student's specific responsibilities, deliverables,
+% technical/research work, and approximate contribution.
+[Insert individual contribution statement.]
+
+\chapter{User Manual / Installation Guide}
+% Include installation, configuration, login/setup, operating instructions,
+% and troubleshooting where applicable.
+[Insert supporting material.]
+
+\chapter{Additional System Designs / Diagrams}
+[Insert large diagrams, additional UML diagrams, database schemas,
+architecture diagrams, or other supporting design material.]
+
+\chapter{Additional Test Cases and Results}
+[Insert extended test cases, logs, screenshots, or detailed evaluation evidence.]
+
+\chapter{Data Collection Instruments}
+% Include questionnaires, interview guides, observation forms,
+% consent documentation, or other instruments where applicable.
+[Insert instruments where applicable.]
+
+\chapter{Additional Code / Configuration}
+% Include only selected, relevant code or configuration.
+% Complete source code should normally be supplied through the
+% designated project repository or submission mechanism.
+[Insert selected supporting code/configuration.]
+
+\chapter{Other Supporting Material}
+[Insert any other material specifically required by the project or supervisor.]
+
+\end{document}
